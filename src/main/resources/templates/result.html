@@ -1,0 +1,106 @@
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+            <br>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 th:text="${student.name} + ${student.surname}" class="panel-title"></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                <tr>
+                                    <td>Name</td>
+                                    <td th:text="${student.name}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Surname</td>
+                                    <td th:text="${student.surname}"></td>
+                                </tr><tr>
+                                    <td>Nationality</td>
+                                    <td th:text="${student.nationality}"></td>
+                                </tr><tr>
+                                    <td>Passport Number</td>
+                                    <td th:text="${student.passportNumber}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Id Number</td>
+                                    <td th:text="${student.idNumber}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Date Of Birth</td>
+                                    <td th:text="${student.dateOfbirth}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Place Of Birth</td>
+                                    <td th:text="${student.placeOfBirth}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Gender</td>
+                                    <td th:text="${student.gender}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Occupation</td>
+                                    <td th:text="${student.occupation}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Phone Number</td>
+                                    <td th:text="${student.phoneNumber}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Education Status</td>
+                                    <td th:text="${student.educationStatus}"></td>
+                                </tr>
+                                <tr>
+                                    <td>University</td>
+                                    <td th:text="${student.university}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Faculty</td>
+                                    <td th:text="${student.faculty}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Department</td>
+                                    <td th:text="${student.department}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Education Year</td>
+                                    <td th:text="${student.educationYear}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Country</td>
+                                    <td th:text="${student.country}"></td>
+                                </tr>
+                                <tr>
+                                    <td>City</td>
+                                    <td th:text="${student.city}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                    <td th:text="${student.address}"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <a href="#" class="btn btn-warning">Edit</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

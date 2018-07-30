@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Student Form</title>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+        <div th:substituteby="layout/navbar :: navbar"></div>
+    </head>
+
+    <div class="container">
+        <div class="row" style="margin-top:30px; margin-bottom:20px">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>Update Register</h1>
+                <form action="#" th:action="@{/students}" th:object="${student}" method="post">
+                    <p>Name: <input type="text" th:field="*{name}" th:value = "${student.name}" class="form-control"/></p>
+                    <p>Surname: <input type="text" th:field="*{surname}" th:value = "${student.surname}" class="form-control"/></p>
+                    <p>Nationality: <input type="text" th:field="*{nationality}" th:value = "${student.nationality}" class="form-control"/></p>
+                    <p>passportNumber: <input type="text" th:field="*{passportNumber}" th:value = "${student.passportNumber}" class="form-control"/></p>
+                    <p>idNumber: <input type="text" th:field="*{idNumber}" th:value = "${student.idNumber}" class="form-control"/></p>
+                    <p>dateOfbirth: <input type="text" th:field="*{dateOfbirth}" th:value = "${student.dateOfbirth}" class="form-control"/></p>
+                    <p>placeOfBirth: <input type="text" th:field="*{placeOfBirth}" th:value = "${student.placeOfBirth}" class="form-control"/></p>
+                    <p>gender: <input type="text" th:field="*{gender}" th:value = "${student.gender}" class="form-control"/></p>
+                    <p>occupation: <input type="text" th:field="*{occupation}" th:value = "${student.occupation}" class="form-control"/></p>
+                    <p>phoneNumber: <input type="text" th:field="*{phoneNumber}" th:value = "${student.phoneNumber}" class="form-control"/></p>
+                    <p>educationStatus: <input type="text" th:field="*{educationStatus}" th:value = "${student.educationStatus}" class="form-control"/></p>
+                    <p>university: <input type="text" th:field="*{university}" th:value = "${student.university}" class="form-control"/></p>
+                    <p>faculty: <input type="text" th:field="*{faculty}" th:value = "${student.faculty}" class="form-control"/></p>
+                    <p>department: <input type="text" th:field="*{department}" th:value = "${student.department}" class="form-control"/></p>
+                    <p>educationYear: <input type="text" th:field="*{educationYear}" th:value = "${student.educationYear}" class="form-control"/></p>
+                    <p>country: <input type="text" th:field="*{country}" th:value = "${student.country}" class="form-control"/></p>
+                    <p>city: <input type="text" th:field="*{city}" th:value = "${student.city}" class="form-control"/></p>
+                    <p>address: <input type="text" th:field="*{address}" th:value = "${student.address}" class="form-control"/></p>
+                    <input th:field="*{id}" type="hidden" th:value = "${student.id}"/>
+                    <p>
+                        <input type="submit" value="Submit"  class="btn btn-success"/>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

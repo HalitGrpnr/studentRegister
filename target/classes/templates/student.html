@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {
+        height: 100%;
+        line-height: 1.8;
+    }
+    /* Full height image header */
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("https://www.w3schools.com/w3images/mac.jpg");
+        min-height: 100%;
+    }
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
+</style>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-light-grey w3-card" id="myNavbar">
+        <a href="/" class="w3-bar-item w3-button w3-wide">UKIT</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+            <a href="/students" onclick="w3_close()" class="w3-bar-item w3-button">All List</a>
+            <a href="/students/add" onclick="w3_close()" class="w3-bar-item w3-button">New Register</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Student Form</title>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <body background="#510f0f">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>-------</h1>
+                <form action="#" th:action="@{/students}" th:object="${student}" method="post">
+                    <p>Name: <input type="text" th:field="*{name}" class="form-control"/></p>
+                    <p>Surname: <input type="text" th:field="*{surname}" class="form-control"/></p>
+                    <p>Nationality: <input type="text" th:field="*{nationality}" class="form-control"/></p>
+                    <p>passportNumber: <input type="text" th:field="*{passportNumber}" class="form-control"/></p>
+                    <p>idNumber: <input type="text" th:field="*{idNumber}" class="form-control"/></p>
+                    <p>dateOfbirth: <input type="text" th:field="*{dateOfbirth}" class="form-control"/></p>
+                    <p>placeOfBirth: <input type="text" th:field="*{placeOfBirth}" class="form-control"/></p>
+                    <p>gender: <input type="text" th:field="*{gender}" class="form-control"/></p>
+                    <p>occupation: <input type="text" th:field="*{occupation}" class="form-control"/></p>
+                    <p>phoneNumber: <input type="text" th:field="*{phoneNumber}" class="form-control"/></p>
+                    <p>educationStatus: <input type="text" th:field="*{educationStatus}" class="form-control"/></p>
+                    <p>university: <input type="text" th:field="*{university}" class="form-control"/></p>
+                    <p>faculty: <input type="text" th:field="*{faculty}" class="form-control"/></p>
+                    <p>department: <input type="text" th:field="*{department}" class="form-control"/></p>
+                    <p>educationYear: <input type="text" th:field="*{educationYear}" class="form-control"/></p>
+                    <p>country: <input type="text" th:field="*{country}" class="form-control"/></p>
+                    <p>city: <input type="text" th:field="*{city}" class="form-control"/></p>
+                    <p>address: <input type="text" th:field="*{address}" class="form-control"/></p>
+                    <p>
+                        <input type="submit" value="Submit"  class="btn btn-success"/>
+                        <input type="reset" value="Reset" class="btn btn-primary pull-right"/>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
